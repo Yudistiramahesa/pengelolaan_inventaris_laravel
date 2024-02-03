@@ -1,4 +1,4 @@
-Membangun Web Pengelolaan Inventaris Menggunakan Framework Laravel 
+Membangun Web Pengelolaan Inventaris Menggunakan Framework Laravel 5.7
 
 Didalam aplikasi ini terdapat fitur-fitur berikut ini :
 
