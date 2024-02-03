@@ -34,6 +34,18 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('products','ProductController');
     Route::get('/apiProducts','ProductController@apiProducts')->name('api.products');
+
+    Route::resource('customers','CustomerController');
+    Route::get('/apiCustomers','CustomerController@apiCustomers')->name('api.customers');
+    Route::post('/importCustomers','CustomerController@ImportExcel')->name('import.customers');
+    Route::get('/exportCustomersAll','CustomerController@exportCustomersAll')->name('exportPDF.customersAll');
+    Route::get('/exportCustomersAllExcel','CustomerController@exportExcel')->name('exportExcel.customersAll');
+
+    Route::resource('suppliers','SupplierController');
+    Route::get('/apiSuppliers','SupplierController@apiSuppliers')->name('api.suppliers');
+    Route::post('/importSuppliers','SupplierController@ImportExcel')->name('import.suppliers');
+    Route::get('/exportSupplierssAll','SupplierController@exportSuppliersAll')->name('exportPDF.suppliersAll');
+    Route::get('/exportSuppliersAllExcel','SupplierController@exportExcel')->name('exportExcel.suppliersAll');
 });
 
 
