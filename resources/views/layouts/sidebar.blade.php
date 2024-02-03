@@ -34,6 +34,8 @@
             <li class="active"><a href="{{ url('/home') }}"><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
             <li class="active"><a href="{{ route('categories.index') }}"><i class="fa fa-link"></i> <span>Kategori</span></a></li>
             <li class="active"><a href="{{ route('products.index') }}"><i class="fa fa-link"></i> <span>Produk</span></a></li>
+            <li class="active"><a href="{{ route('customers.index') }}"><i class="fa fa-link"></i> <span>Pelanggan</span></a></li>
+            <li class="active"><a href="{{ route('suppliers.index') }}"><i class="fa fa-link"></i> <span>Supplier</span></a></li>
         </ul>
         <!-- /.sidebar-menu -->
     </section>
