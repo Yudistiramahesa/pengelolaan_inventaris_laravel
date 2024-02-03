@@ -26,4 +26,14 @@ Route::get('dashboard', function () {
    return view('layouts.master');
 });
 
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('categories','CategoryController');
+    Route::get('/apiCategories','CategoryController@apiCategories')->name('api.categories');
+    Route::get('/exportCategoriesAll','CategoryController@exportCategoriesAll')->name('exportPDF.categoriesAll');
+    Route::get('/exportCategoriesAllExcel','CategoryController@exportExcel')->name('exportExcel.categoriesAll');
+
+    Route::resource('products','ProductController');
+    Route::get('/apiProducts','ProductController@apiProducts')->name('api.products');
+});
+
 
